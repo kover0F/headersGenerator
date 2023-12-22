@@ -1,0 +1,33 @@
+﻿<Window x:Class="headersGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:headersGenerator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="379" Background="#FFD2B19F">
+    <Grid HorizontalAlignment="Left" Width="267">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="71*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Generate File" HorizontalAlignment="Left" Margin="23,282,0,0" VerticalAlignment="Top" Height="38" Width="147" Grid.ColumnSpan="2" Click="Button_Click_1"/>
+        <ComboBox Name="extension" HorizontalAlignment="Left" Margin="23,134,0,0" VerticalAlignment="Top" Width="123" Height="22" Grid.ColumnSpan="2">
+            <ComboBoxItem Content=".pdf"/>
+            <ComboBoxItem Content=".docx"/>
+        </ComboBox>
+        <Label Content="Headers (on new line)" HorizontalAlignment="Left" Margin="23,11,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.263,0.31" Width="182" Height="26" Grid.ColumnSpan="2"/>
+        <Label Content="Filename extension" HorizontalAlignment="Left" Margin="23,106,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.105,0.271" Width="182" Height="25" Grid.ColumnSpan="2"/>
+        <Label Content="File name" HorizontalAlignment="Left" Margin="23,177,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,0.271" Height="25" Width="62" Grid.ColumnSpan="2"/>
+        <TextBox Name="filename" HorizontalAlignment="Left" Margin="23,202,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="123" Height="18" Grid.ColumnSpan="2"/>
+        <Button Content="File directory" HorizontalAlignment="Left" Margin="23,238,0,0" VerticalAlignment="Top" Click="Button_Click" Height="20" Width="74" Grid.ColumnSpan="2"/>
+        <RichTextBox Name="headers" Margin="24,34,81,283" Grid.ColumnSpan="2" >
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+    </Grid>
+</Window>
